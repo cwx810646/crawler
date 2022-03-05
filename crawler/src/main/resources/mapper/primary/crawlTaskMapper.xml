@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ -->
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "D:\learn\mybatis\mybatis-3-mapper.dtd">
+<mapper namespace="com.chenjie.dao.mapper.CrawlTaskMapper"> 
+    <insert id="create"> 
+    	INSERT INTO tbl_crawl_task(
+			`userId`,
+			`name`,
+			`ruleJson`
+		)VALUES(
+			#{userId},
+			#{name},
+			#{ruleJson}
+		)
+    </insert> 
+    <select id="queryCrawTaskById" resultType="CrawlTaskModel">
+    	SELECT 
+		`id`,
+		`userId`,
+		`name`,
+		`ruleJson`,
+		`createTime`,
+		`updateTime`
+		FROM tbl_crawl_task 
+		where id = #{id} 
+    </select>
+</mapper>
