@@ -1,7 +1,6 @@
-package com.chenjie.core.projects.self;
+package com.chenjie.core.project.self;
 
-import com.chenjie.core.loaders.Loader;
-import org.checkerframework.checker.units.qual.C;
+import com.chenjie.core.loader.Loader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.PageLoadStrategy;

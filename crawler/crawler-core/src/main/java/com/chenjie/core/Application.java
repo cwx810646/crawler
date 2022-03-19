@@ -1,8 +1,8 @@
 package com.chenjie.core;
 
-import com.chenjie.core.projects.self.WebLoader;
-import com.chenjie.core.projects.self.WebParser;
-import com.chenjie.core.projects.self.WebResult;
+import com.chenjie.core.project.self.WebLoader;
+import com.chenjie.core.project.self.WebParser;
+import com.chenjie.core.project.self.WebResult;
 
 public class Application {
     public static void main(String[] args) {

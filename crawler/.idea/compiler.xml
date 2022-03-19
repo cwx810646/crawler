@@ -15,8 +15,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="crawler-api" target="8" />
-      <module name="crawler-http" target="8" />
-      <module name="crawler-impl" target="8" />
       <module name="http" target="1.8" />
       <module name="impl" target="8" />
     </bytecodeTargetLevel>
