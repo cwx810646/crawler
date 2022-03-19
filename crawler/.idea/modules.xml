@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api/crawler-api.iml" filepath="$PROJECT_DIR$/api/crawler-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crawler-http/crawler-http.iml" filepath="$PROJECT_DIR$/crawler-http/crawler-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crawler-impl/crawler-impl.iml" filepath="$PROJECT_DIR$/crawler-impl/crawler-impl.iml" />
+    </modules>
+  </component>
+</project>
