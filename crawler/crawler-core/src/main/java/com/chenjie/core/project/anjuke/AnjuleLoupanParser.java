@@ -8,7 +8,7 @@ import org.jsoup.select.Elements;
 public class AnjuleLoupanParser implements Parser<String, Loupan> {
     @Override
     public Loupan parse(String html) {
-        Loupan loupan = new Loupan();
+        Loupan loupan = new Loupan(); 
         Document document = Jsoup.parse(html);
         Elements nameElement = document.select(".basic-details .basic-info h1");
         String name = nameElement.text();

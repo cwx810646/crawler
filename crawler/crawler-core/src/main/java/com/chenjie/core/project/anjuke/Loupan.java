@@ -13,4 +13,12 @@ public class Loupan {
     private String openTime;
     private String checkTime;
     private String address;
+	
+    public Loupan(String name) { 
+    	this.name = name;
+    }	
+    
+	public Loupan() { 
+		this(null);
+	} 
 }

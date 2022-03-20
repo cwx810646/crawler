@@ -1,20 +1,18 @@
 package com.chenjie.core.project.anjuke;
 
-import com.chenjie.core.loader.Loader;
-import lombok.extern.slf4j.Slf4j;
-import org.checkerframework.checker.units.qual.A;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+
+import com.chenjie.core.loader.Loader;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class AnjukeLoader implements Loader<List<String>> {
@@ -30,7 +28,7 @@ public class AnjukeLoader implements Loader<List<String>> {
     public void init(){
         ChromeOptions options = new ChromeOptions();
         //  配置页面加载的等待策略, 等待所有静态资源加载完毕
-        options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        //	options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         driver = new ChromeDriver(options);
     }
 
