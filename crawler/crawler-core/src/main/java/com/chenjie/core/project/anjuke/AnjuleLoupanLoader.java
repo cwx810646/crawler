@@ -21,7 +21,7 @@ public class AnjuleLoupanLoader implements Loader<String> {
     public void init(){
         ChromeOptions options = new ChromeOptions();
         //  配置页面加载的等待策略, 等待所有静态资源加载完毕
-        //	options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        // options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         driver = new ChromeDriver(options);
     }
 

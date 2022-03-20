@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="crawler-service" />
         <module name="crawler-core" />
         <module name="api" />
         <module name="crawler-http" />
@@ -27,6 +28,7 @@
       <module name="crawler-core" options="-parameters" />
       <module name="crawler-http" options="-parameters" />
       <module name="crawler-impl" options="-parameters" />
+      <module name="crawler-service" options="-parameters" />
       <module name="http" options="-parameters" />
       <module name="impl" options="-parameters" />
     </option>

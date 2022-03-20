@@ -41,6 +41,6 @@ public class AnjukeServiceImpl implements AnjuKeService {
 
 	public static void init() {
 		System.setProperty("webdriver.chrome.driver",
-				"E:\\code\\crawler\\crawler\\webdrivers\\chromedriver-99.0.4844.exe");
+				"D:\\learn\\code\\github\\crawler\\crawler\\webdrivers\\chromedriver.exe");
 	}
 }

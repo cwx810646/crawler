@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,7 +29,7 @@ public class AnjukeLoader implements Loader<List<String>> {
     public void init(){
         ChromeOptions options = new ChromeOptions();
         //  配置页面加载的等待策略, 等待所有静态资源加载完毕
-        //	options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        // options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         driver = new ChromeDriver(options);
     }
 

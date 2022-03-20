@@ -2,12 +2,14 @@ package com.chenjie.core.project.anjuke;
 
 import com.chenjie.core.parser.Parser;
 import org.jsoup.Jsoup;
+import org.jsoup.internal.StringUtil;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 public class AnjuleLoupanParser implements Parser<String, Loupan> {
     @Override
     public Loupan parse(String html) {
+        if (StringUtil.isBlank(html)) return null;
         Loupan loupan = new Loupan(); 
         Document document = Jsoup.parse(html);
         Elements nameElement = document.select(".basic-details .basic-info h1");

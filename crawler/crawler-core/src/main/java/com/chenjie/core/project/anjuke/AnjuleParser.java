@@ -2,6 +2,7 @@ package com.chenjie.core.project.anjuke;
 
 import com.chenjie.core.parser.Parser;
 import org.jsoup.Jsoup;
+import org.jsoup.internal.StringUtil;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
@@ -11,12 +12,19 @@ import java.util.List;
 public class AnjuleParser implements Parser<String, List<Loupan>> {
     @Override
     public List<Loupan> parse(String html) {
+        if (StringUtil.isBlank(html)) return null;
         Document document = Jsoup.parse(html);
         Elements elements = document.select("#container .list-results .item-mod");
         List<Loupan> loupans = new ArrayList<>();
         elements.forEach(element -> {
             String link = element.attr("data-link");
-            loupans.add(parseLoupan(link));
+            Loupan loupan = parseLoupan(link);
+            if (loupan != null) loupans.add(loupan);
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         });
         return loupans;
     }
