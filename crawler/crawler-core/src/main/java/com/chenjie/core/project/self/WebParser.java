@@ -13,15 +13,15 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 @Data
-public class WebParser implements Parser<String, WebResult> {
-    private String url;
+public class WebParser implements Parser<WebResult> {
+    private String html;
 
-    public WebParser(String url){
-        this.url = url;
+    public WebParser(String html){
+        this.html = html;
     }
 
     @Override
-    public WebResult parse(String html) {
+    public WebResult parse() {
         Document document = Jsoup.parse(html);
         System.out.println(document.html());
         return null;

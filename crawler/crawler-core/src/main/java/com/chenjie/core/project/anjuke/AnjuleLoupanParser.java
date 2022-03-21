@@ -6,9 +6,15 @@ import org.jsoup.internal.StringUtil;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-public class AnjuleLoupanParser implements Parser<String, Loupan> {
-    @Override
-    public Loupan parse(String html) {
+public class AnjuleLoupanParser implements Parser<Loupan> {
+	private String html; 
+	
+	public AnjuleLoupanParser(String html) { 
+		this.html = html;
+	} 
+
+	@Override
+    public Loupan parse() {
         if (StringUtil.isBlank(html)) return null;
         Loupan loupan = new Loupan(); 
         Document document = Jsoup.parse(html);

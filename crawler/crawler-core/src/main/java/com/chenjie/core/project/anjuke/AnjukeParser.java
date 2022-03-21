@@ -1,24 +1,35 @@
 package com.chenjie.core.project.anjuke;
 
-import com.chenjie.core.parser.Parser;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.jsoup.Jsoup;
 import org.jsoup.internal.StringUtil;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.openqa.selenium.WebDriver;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.Data;
 
-public class AnjuleParser implements Parser<String, List<Loupan>> {
-    @Override
-    public List<Loupan> parse(String html) {
+@Data
+public class AnjukeParser{ 
+    private String html;
+
+    private WebDriver driver = null;
+    
+    public AnjukeParser(String html, WebDriver driver) {
+    	this.html = html;
+    	this.driver = driver;
+    }
+
+    public  List<Loupan> parse() {
         if (StringUtil.isBlank(html)) return null;
         Document document = Jsoup.parse(html);
         Elements elements = document.select("#container .list-results .item-mod");
         List<Loupan> loupans = new ArrayList<>();
         elements.forEach(element -> {
             String link = element.attr("data-link");
-            Loupan loupan = parseLoupan(link);
+            Loupan loupan = loupanCrawler(link);
             if (loupan != null) loupans.add(loupan);
             try {
                 Thread.sleep(3000);
@@ -29,10 +40,10 @@ public class AnjuleParser implements Parser<String, List<Loupan>> {
         return loupans;
     }
 
-    public Loupan parseLoupan(String url){
-        AnjuleLoupanLoader loader = new AnjuleLoupanLoader(url);
+    public Loupan loupanCrawler (String url){
+        AnjuleLoupanLoader loader = new AnjuleLoupanLoader(url, driver);
         String html = loader.load();
-        AnjuleLoupanParser parser = new AnjuleLoupanParser();
-        return parser.parse(html);
+        AnjuleLoupanParser parser = new AnjuleLoupanParser(html);
+        return parser.parse();
     }
 }
