@@ -41,9 +41,7 @@ public class AnjukeLoader{
             }
         }catch (Exception e){
             log.error("{}", e);
-        }finally {
-            driver.quit();
-        }
+        } 
         return htmls;
     }
 }

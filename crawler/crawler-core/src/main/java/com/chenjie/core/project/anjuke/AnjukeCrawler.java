@@ -1,9 +1,8 @@
 package com.chenjie.core.project.anjuke;
 
 import java.util.ArrayList;
-import java.util.List; 
+import java.util.List;
 
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,8 +27,10 @@ public class AnjukeCrawler implements Crawler<List<Loupan>> {
 	public void initDriver() {
 		ChromeOptions options = new ChromeOptions();
 		// options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-		// options.addArguments("headless");
+		// options.setAcceptInsecureCerts(false);
+		options.addArguments("headless");
 		driver = new ChromeDriver(options);
+		
 	}
 
 	@Override
