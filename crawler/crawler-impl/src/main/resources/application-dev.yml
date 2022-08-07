@@ -1,0 +1,3 @@
+local:
+  driver:
+    chrome: E:\project\search\driver\chromedriver-99.0.4844.51.exe

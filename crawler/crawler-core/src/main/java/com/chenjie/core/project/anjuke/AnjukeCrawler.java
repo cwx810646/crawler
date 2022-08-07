@@ -28,9 +28,8 @@ public class AnjukeCrawler implements Crawler<List<Loupan>> {
 		ChromeOptions options = new ChromeOptions();
 		// options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 		// options.setAcceptInsecureCerts(false);
-		options.addArguments("headless");
+		// options.addArguments("headless");
 		driver = new ChromeDriver(options);
-		
 	}
 
 	@Override

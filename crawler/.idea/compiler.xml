@@ -6,16 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="crawler-service" />
         <module name="crawler-core" />
         <module name="api" />
-        <module name="crawler-http" />
         <module name="crawler-impl" />
-        <module name="crawler-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="crawler-api" target="8" />
+      <module name="crawler-http" target="1.8" />
       <module name="http" target="1.8" />
       <module name="impl" target="8" />
     </bytecodeTargetLevel>
@@ -28,7 +26,6 @@
       <module name="crawler-core" options="-parameters" />
       <module name="crawler-http" options="-parameters" />
       <module name="crawler-impl" options="-parameters" />
-      <module name="crawler-service" options="-parameters" />
       <module name="http" options="-parameters" />
       <module name="impl" options="-parameters" />
     </option>

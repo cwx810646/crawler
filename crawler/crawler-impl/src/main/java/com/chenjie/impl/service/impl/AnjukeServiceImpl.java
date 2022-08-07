@@ -21,15 +21,9 @@ public class AnjukeServiceImpl implements AnjuKeService {
 
 	@Override
 	public void capture() {
-		init();
 		String url = "https://xa.fang.anjuke.com/loupan/xixianxinqu/";
 		AnjukeCrawler crawler = new AnjukeCrawler(url);
 		List<Loupan> loupans = crawler.run();
 		anjukeMapper.batchInsert(loupans);
-	}
-
-	public static void init() {
-		System.setProperty("webdriver.chrome.driver",
-				"E:\\code\\crawler\\crawler\\webdrivers\\chromedriver-99.0.4844.exe");
 	}
 }

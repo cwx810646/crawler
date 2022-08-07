@@ -9,20 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion> 
     <artifactId>crawler-impl</artifactId>
+    <name>crawler-impl</name>
     <dependencies>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.chenjie</groupId>
-            <artifactId>crawler-core</artifactId>
-             <version>0.0.1-SNAPSHOT</version>
-        </dependency> 
 		<dependency>
-		    <groupId>org.mybatis.spring.boot</groupId>
-		    <artifactId>mybatis-spring-boot-starter</artifactId> 
-		</dependency> 
+			<groupId>com.chenjie</groupId>
+			<artifactId>crawler-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
